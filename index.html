@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikhail | Visual Architect</title>
+    <meta name="description" content="Visual Architect. High-end motion design & production.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+    </script>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <span class="loader-text">MIKHAIL</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+    <div class="noise-overlay"></div>
+
+    <canvas id="lines-canvas"></canvas>
+    <div class="vignette-overlay"></div>
+    <div id="canvas-container"></div>
+
+    <audio id="ambient-music" loop>
+        <source src="assets/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <div id="sound-toggle" class="interactive">OFF</div>
+
+    <div class="container">
+        <header>
+            <div class="avatar-wrapper reveal-anim">
+                <img src="assets/avatar.jpg" alt="Logo"> 
+            </div>
+            <h1 class="reveal-anim glitch-text">MIKHAIL</h1>
+            <p class="tagline reveal-anim">Visual Architect. Создаю смыслы через кадры.</p>
+
+            <div class="nav-buttons reveal-anim">
+                <!-- Ссылка на Клиентов удалена -->
+                <a href="#portfolio" class="nav-btn interactive">Работы</a>
+                <a href="#reviews" class="nav-btn interactive">Отзывы</a>
+            </div>
+            
+            <div class="gem-container reveal-anim">
+                <a href="https://t.me/barabulreels" target="_blank" class="amethyst-btn interactive">
+                    <span class="btn-text">Telegram</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+        </header>
+
+        <!-- Секция Clients удалена -->
+
+        <section id="portfolio">
+            <div class="section-title reveal-anim">Избранные работы</div>
+            
+            <div class="portfolio-container reveal-anim">
+                <div class="video-card" data-video-full="assets/video1.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="assets/video1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <div class="play-icon"></div>
+                        <span>REELS</span>
+                    </div>
+                </div>
+                <div class="video-card" data-video-full="assets/video2.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="assets/video2.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <div class="play-icon"></div>
+                        <span>REELS</span>
+                    </div>
+                </div>
+                <div class="video-card" data-video-full="assets/video4.mp4">
+                    <video muted loop playsinline preload="metadata">
+                        <source src="assets/video4.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <div class="play-icon"></div>
+                        <span>MOUTION</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="section-title reveal-anim">Отзывы клиентов</div>
+            <div class="reviews-grid">
+                <div class="review-card interactive reveal-anim">
+                    <div class="review-avatar"><img src="assets/review1.jpg" loading="lazy"></div>
+                    <div class="review-content"><h3>Максим Поярче</h3><p>Привет бро, по анимациям и всему остальному просто невероятная пушка! 
+Ты как всегда красавчик!!!</p></div>
+                </div>
+                <div class="review-card interactive reveal-anim">
+                    <div class="review-avatar"><img src="assets/review2.jpg" loading="lazy"></div>
+                    <div class="review-content"><h3>Леонид</h3><p>Офигенно Имба просто огонь 🔥</p></div>
+                </div>
+                <div class="review-card interactive reveal-anim">
+                    <div class="review-avatar"><img src="assets/review3.jpg" loading="lazy"></div>
+                    <div class="review-content"><h3>Дмитрий К.</h3><p>Саунд-дизайн на уровне кино. Работаем дальше!</p></div>
+                </div>
+                <!-- 4-й отзыв удален -->
+            </div>
+            <div class="cta-container reveal-anim" style="margin-top: 80px; text-align: center;">
+                <a href="https://t.me/barabulreels" target="_blank" class="amethyst-btn interactive" style="width: auto; padding: 0 70px; display: inline-flex;">
+                    <span class="btn-text">Связаться со мной</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+        </section>
+        
+        <footer class="reveal-anim">© 2026 Mikhail Visuals.</footer>
+    </div>
+
+    <div class="video-modal" id="video-modal">
+        <div class="close-modal">&times;</div>
+        <div class="modal-content">
+            <video id="main-player" controls playsinline controlsList="nodownload"></video>
+        </div>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
